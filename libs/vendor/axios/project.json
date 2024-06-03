@@ -1,0 +1,19 @@
+{
+  "name": "axios",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/vendor/axios/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/vendor/axios",
+        "main": "libs/vendor/axios/src/index.ts",
+        "tsConfig": "libs/vendor/axios/tsconfig.lib.json",
+        "assets": ["libs/vendor/axios/*.md"]
+      }
+    }
+  }
+}

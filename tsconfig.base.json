@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@study-nx/advanced-react": ["libs/advanced-react/src/index.ts"]
+      "@study-nx/advanced-react": ["libs/advanced-react/src/index.ts"],
+      "@study-nx/axios": ["libs/vendor/axios/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
