@@ -1,10 +1,10 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import { User, useGetCurrentUser } from '../hooks'
 
-const BasicFormWrapper = (Component: FC<User>) => {
+const BasicFormWrapper = (Component: React.JSXElementConstructor<User>) => {
     const user = useGetCurrentUser()
-    return (props: User) => {
-        return <Component {...user} />
+    return () => {
+        return user && <Component {...user} />
     }
 }
 

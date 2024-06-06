@@ -1,5 +1,5 @@
 import { chain, get } from 'lodash';
-import { useGetResource } from '../shared';
+import { useGetResource } from '../../shared';
 import RecursiveComponent from './RecursiveComponent';
 
 const Drawer = () => {

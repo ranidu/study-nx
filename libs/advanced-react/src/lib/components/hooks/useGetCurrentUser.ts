@@ -9,11 +9,11 @@ export interface User {
 }
 
 const useGetCurrentUser = () => {
-    const [user, setUser] = useState<User>()
+    const [user, setUser] = useState<User | null>(null)
 
     useEffect(() => {(async() => {
         const resp = await axios().get('/users/1')
-        setUser(resp?.data || {})
+        setUser(resp.data)
     })()}, [])
 
     return user

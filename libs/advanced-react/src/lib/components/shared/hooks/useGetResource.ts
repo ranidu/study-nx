@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import { axios } from '@study-nx/axios'
 
-export interface UseGetResource {
+export interface UseGetProps {
     url: string
 }
 
-const useGetResource = ({ url }: UseGetResource) => {
+const useGetResource = ({ url }: UseGetProps) => {
     const [resourceData, setResourceData] = useState()
 
     useEffect(() => {(async() => {
