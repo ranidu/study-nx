@@ -10,7 +10,7 @@ const Drawer = () => {
       <ul>  
       {chain(resp)
         .keys()
-        .map((key) => <li>{key}: <RecursiveComponent data={get(resp, key)} /></li>)
+        .map((key, index) => <li key={`${index}-${key}`}>{key}: <RecursiveComponent data={get(resp, key)} /></li>)
         .value()}
         </ul>
     </div>

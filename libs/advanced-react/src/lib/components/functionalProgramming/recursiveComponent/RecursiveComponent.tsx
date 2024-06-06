@@ -12,9 +12,9 @@ const RecursiveComponent: FC<any> = ({ data }) => {
     <ul>
       {map(subValues, ([key, value]) => {
         return (
-          <li>
+          <li key={key}>
             {key}:
-            <RecursiveComponent data={value} />
+            <RecursiveComponent key={key} data={value} />
           </li>
         );
       })}
